@@ -2,12 +2,11 @@ import uuid
 
 from sqlalchemy import Boolean, Column, DateTime, String, func
 
-from ..core.database import Base
 
 
-class BaseEntityModel(Base):
+class BaseModel:
     id_ = Column(
-        String(36), nullable=False, unique=True, default=uuid.uuid4, primary_key=True
+        String(36), name="id", nullable=False, unique=True, default=uuid.uuid4, primary_key=True
     )
     created_at = Column(
         DateTime(timezone=True), server_default=func.now(), nullable=False

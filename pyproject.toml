@@ -10,6 +10,7 @@ package-mode= false
 python = "^3.10"
 pydantic = "^2.7.1"
 sqlalchemy = "^2.0.30"
+pymysql = "^1.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
